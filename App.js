@@ -33,16 +33,26 @@ class Blink extends Component {
 }
 
 export default class App extends Component {
-  render() {
-    return (
-      <View>
-        <Blink text='I love to blink' />
-        <Blink text='Yes blinking is so great' />
-        <Blink text='Why did they ever take this out of HTML' />
-        <Blink text='Look at me look at me look at me' />
-      </View>
-    );
-  }
+    render() {
+      return (
+        <View style={appStyles.container}>
+          <View style={appStyles.tbar}>
+          <Text style={appStyles.text}>Hello</Text>
+          </View>
+        </View>
+      );
+    }
+
+  // render() {
+  //   return (
+  //     <View>
+  //       <Blink text='I love to blink' />
+  //       <Blink text='Yes blinking is so great' />
+  //       <Blink text='Why did they ever take this out of HTML' />
+  //       <Blink text='Look at me look at me look at me' />
+  //     </View>
+  //   );
+  // }
 
   // render() {
   //   let pic = {
@@ -64,7 +74,32 @@ export default class App extends Component {
   // }
 }
 
+const appStyles = StyleSheet.create({
+  tbar: {
+    width: 375,
+    height: 100,
+    borderBottomWidth: 5,
+    borderColor: 'black',
+    backgroundColor: 'red'
+  },
+  container: {
+    flex: 1
+  },
+  text: {
+    color: '#ffffff',
+    fontSize: 40,
+    textAlign: 'center'
+  }
+});
+
 const styles = StyleSheet.create({
+  tbar: {
+    width: 375,
+    height: 100,
+    borderBottomWidth: 5,
+    borderColor: 'black',
+    backgroundColor: 'red'
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
