@@ -11,20 +11,25 @@ export default class Toolbar extends Component {
     };
 
     render() {
-        if (this.props.showBack)
+        // if (this.props.showBack)
             return(
                 <View style = { toolbar.container }>
-                    <TouchableOpacity style = { toolbar.backContainer } onPress = { this.zxc }>
-                        <Image style = { toolbar.backImage } source = { back } />
-                    </TouchableOpacity>    
+                    {
+                        this.props.showBack 
+                            ?   { <TouchableOpacity style = { toolbar.backContainer } onPress = { this.zxc }>
+                                    <Image style = { toolbar.backImage } source = { back } />
+                                   </TouchableOpacity>    
+                                }
+                            : null
+                    }
                     <Text style = { toolbar.title }>{ this.props.text }</Text>
                 </View>
             );
-        else
-            return (
-                <View style = { toolbar.container }>
-                    <Text style = { toolbar.title }>{ this.props.text }</Text>
-                </View>
-            );
+//         else
+//             return (
+//                 <View style = { toolbar.container }>
+//                     <Text style = { toolbar.title }>{ this.props.text }</Text>
+//                 </View>
+//             );
     }
   }
